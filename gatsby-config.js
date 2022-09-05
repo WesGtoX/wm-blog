@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `My Blog`,
-    description: `A blog about software developement and other cool stuff.`,
+    title: `Wesley Mendes`,
+    position: `Senior Backend Engineer`,
+    description: `Member of Atados Core Team, I write about the Backend world and other things.`,
     author: `@myblog`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
@@ -27,7 +28,7 @@ module.exports = {
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/wm-icon.png`, // This path is relative to the root of the site.
       },
     },
   ],
