@@ -14,7 +14,7 @@ const links = [
     url: `https://twitter.com/${handle}`,
   },
   {
-    label: "YouTube",
+    label: "Youtube",
     url: "https://www.youtube.com/channel/UCXwcNJg6iDj3s7MLSJJ9EXQ",
   },
   {
