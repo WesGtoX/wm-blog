@@ -8,34 +8,32 @@ import { Grid } from "@styled-icons/boxicons-solid/Grid"
 
 import * as S from "./styled"
 
-const MenuBar = () => {
-  return (
-    <S.MenuBarWrapper>
-      <S.MenuBarGroup>
-        <S.MenuBarLink to="/" title="Voltar para Home">
-          <S.MenuBarItem>
-            <Home />
-          </S.MenuBarItem>
-        </S.MenuBarLink>
-        <S.MenuBarLink to="/search/" title="Pesquisar">
-          <S.MenuBarItem>
-            <Search />
-          </S.MenuBarItem>
-        </S.MenuBarLink>
-      </S.MenuBarGroup>
-      <S.MenuBarGroup>
-        <S.MenuBarItem title="Mudar o tema">
-          <Light />
+const MenuBar = () => (
+  <S.MenuBarWrapper>
+    <S.MenuBarGroup>
+      <S.MenuBarLink to="/" title="Voltar para Home">
+        <S.MenuBarItem>
+          <Home />
         </S.MenuBarItem>
-        <S.MenuBarItem title="Mudar visualização">
-          <Grid />
+      </S.MenuBarLink>
+      <S.MenuBarLink to="/search/" title="Pesquisar">
+        <S.MenuBarItem>
+          <Search />
         </S.MenuBarItem>
-        <S.MenuBarItem title="Ir para o Topo">
-          <Arrow />
-        </S.MenuBarItem>
-      </S.MenuBarGroup>
-    </S.MenuBarWrapper>
-  )
-}
+      </S.MenuBarLink>
+    </S.MenuBarGroup>
+    <S.MenuBarGroup>
+      <S.MenuBarItem title="Mudar o tema">
+        <Light />
+      </S.MenuBarItem>
+      <S.MenuBarItem title="Mudar visualização">
+        <Grid />
+      </S.MenuBarItem>
+      <S.MenuBarItem title="Ir para o Topo">
+        <Arrow />
+      </S.MenuBarItem>
+    </S.MenuBarGroup>
+  </S.MenuBarWrapper>
+)
 
 export default MenuBar
