@@ -7,7 +7,7 @@ import PostItem from "../components/PostItem"
 import Pagination from "../components/Pagination"
 
 export const query = graphql`
-  query PostList($skip: Int, $limit: Int) {
+  query PostList($skip: Int!, $limit: Int!) {
     allMarkdownRemark(
       sort: { fields: frontmatter___date, order: DESC }
       limit: $limit
