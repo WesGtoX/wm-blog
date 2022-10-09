@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 
 export const PostItemLink = styled(Link)`
-  color: #8899a6;
+  color: var(--texts);
   display: flex;
   text-decoration: none;
 
