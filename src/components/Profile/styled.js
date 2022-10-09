@@ -13,7 +13,7 @@ export const ProfileLink = styled(Link)`
   transition: color 0.5s;
 
   &:hover {
-    color: #1fa1f2;
+    color: var(--highlight);
   }
 `
 
@@ -23,7 +23,7 @@ export const ProfileAuthor = styled.h1`
 `
 
 export const ProfilePosition = styled.small`
-display: block;
+  display: block;
   font-size: 1.2rem;
   font-weight: 300;
 `
