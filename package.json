@@ -28,7 +28,8 @@
     "react-dom": "^18.1.0",
     "react-instantsearch-dom": "^6.36.0",
     "styled-components": "^5.3.5",
-    "styled-icons": "^10.46.0"
+    "styled-icons": "^10.46.0",
+    "styled-media-query": "^2.1.2"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
