@@ -15,7 +15,7 @@ const links = [
   },
   {
     label: "Youtube",
-    url: "https://www.youtube.com/channel/UCXwcNJg6iDj3s7MLSJJ9EXQ",
+    url: `https://www.youtube.com/@${handle}`,
   },
   {
     label: "Instagram",
