@@ -32,7 +32,6 @@ const BlogPost = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <Seo title={post.frontmatter.title} />
       <S.PostHeader>
         <S.PostDate>
           {post.frontmatter.date} • {post.timeToRead} min de leitura
@@ -46,6 +45,18 @@ const BlogPost = ({ data, pageContext }) => {
       <RecommendedPosts next={next} previous={previous} />
       <Comments url={post.fields.slug} title={post.frontmatter.title} />
     </Layout>
+  )
+}
+
+export const Head = ({ data }) => {
+  const post = data.markdownRemark
+
+  return (
+    <Seo
+      title={post.frontmatter.title}
+      description={post.frontmatter.description}
+      image={post.frontmatter.image}
+    />
   )
 }
 

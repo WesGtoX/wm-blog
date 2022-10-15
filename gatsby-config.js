@@ -5,12 +5,13 @@ const queries = require("./src/utils/algolia_queries")
 module.exports = {
   siteMetadata: {
     title: `Wesley Mendes`,
-    position: `Senior Backend Engineer`,
-    description: `Member of Atados Core Team, I write about the Backend world and other things.`,
-    author: `@myblog`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    position: `Senior Software Engineer`,
+    description: `A blog where I write about software development, technology and other cool stuff.`,
+    author: `@wesgtox`,
+    siteUrl: `https://wesleymendes.com/`,
   },
   plugins: [
+    `gatsby-plugin-transition-link`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-image`,
     // needs to be the first to work with gatsby-remark-images

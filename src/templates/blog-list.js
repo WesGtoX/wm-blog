@@ -45,7 +45,6 @@ const BlogList = props => {
 
   return (
     <Layout>
-      <Seo title="Home" />
       <S.ListWrapper>
         {postList.map(
           ({
@@ -78,5 +77,7 @@ const BlogList = props => {
     </Layout>
   )
 }
+
+export const Head = () => <Seo title="Home" />
 
 export default BlogList
