@@ -1,5 +1,7 @@
 import styled from "styled-components"
 import media from "styled-media-query"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
+import transitions from "./transitions"
 
 export const PostHeader = styled.header`
   color: var(--postColor);
@@ -36,6 +38,22 @@ export const PostDescription = styled.h2`
     line-height: 1.3;
     padding: 0 1rem;
   `}
+`
+
+export const ButtonBack = styled(AniLink)`
+  color: var(--texts);
+  display: flex;
+  text-decoration: none;
+  margin: 0 0 1.5rem 1.5rem;
+  transition: ${transitions.COLOR};
+
+  ${media.lessThan("large")`
+    margin: 0 0 1.5rem 1rem;
+  `}
+
+  &:hover {
+    color: var(--highlight);
+  }
 `
 
 export const PostDate = styled.p`
@@ -117,7 +135,9 @@ export const MainContent = styled.section`
 
   img {
     display: block;
+    width: auto;
     max-width: 100%;
+    margin: 1.875rem auto;
   }
 
   iframe {
@@ -130,14 +150,10 @@ export const MainContent = styled.section`
   }
 
   blockquote {
-    color: var(--texts);
+    color: var(--postColor);
     border-left: 0.3rem solid var(--highlight);
     padding: 0 1.875rem;
     margin: 3.125rem auto;
-
-    ${media.lessThan('large')`
-      margin-left: 1rem;
-    `}
   }
 
   hr {
