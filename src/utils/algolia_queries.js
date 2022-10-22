@@ -39,6 +39,7 @@ const queries = [
     transformer: ({ data }) => flatten(data.posts.edges),
     indexName: `prod_posts`,
     settings,
+    matchFields: ["slug"],
   },
 ]
 

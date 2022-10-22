@@ -69,22 +69,26 @@ module.exports = {
         queries,
         chunkSize: 10000,
         enablePartialUpdates: true,
+        matchFields: ["slug"],
       },
     },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Wesley Mendes`,
+        short_name: `Wesley Mendes`,
         start_url: `/`,
-        background_color: `#663399`,
+        background_color: `#16202c`,
         // This will impact how browsers show your PWA/website
         // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#663399`,
+        theme_color: `#16202c`,
         display: `minimal-ui`,
-        icon: `src/images/wm-icon.png`, // This path is relative to the root of the site.
+        icon: `static/assets/img/wm_logo.png`,
       },
     },
     `gatsby-plugin-sitemap`,
+    // this (optional) plugin enables Progressive Web App + Offline functionality
+    // To learn more, visit: https://gatsby.dev/offline
+    `gatsby-plugin-offline`,
   ],
 }
