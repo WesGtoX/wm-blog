@@ -22,7 +22,8 @@ const postQuery = `{
 }`
 
 const flatten = arr =>
-  arr.map(({ node: { frontmatter, ...rest } }) => ({
+  arr.map(({ node: { frontmatter, fields, ...rest } }) => ({
+    ...fields,
     ...frontmatter,
     date_timestamp: parseInt(
       (new Date(frontmatter.date_timestamp).getTime() / 1000).toFixed(0),
