@@ -3,6 +3,9 @@
     <img src=".github/wm_logo.png" alt="WM Blog" title="WM Blog" width="150px">
   </a>
   <br />
+  <a href="https://app.netlify.com/sites/wm-blog/deploys">
+    <img src="https://api.netlify.com/api/v1/badges/0167636a-45d5-4b3e-927c-eda9d7b4cd5d/deploy-status" />
+  </a>
 </h1>
 
 <p align="center">
