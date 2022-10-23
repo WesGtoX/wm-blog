@@ -33,9 +33,9 @@ const MenuBar = () => {
           cover
           direction="right"
           bg={getThemeColor()}
-          duration={0.6}
           to="/"
           title="Voltar para Home"
+          activeClassName="active"
         >
           <S.MenuBarItem>
             <Home />
@@ -48,6 +48,7 @@ const MenuBar = () => {
           duration={0.6}
           to="/search/"
           title="Pesquisar"
+          activeClassName="active"
         >
           <S.MenuBarItem>
             <Search />
@@ -59,6 +60,14 @@ const MenuBar = () => {
           title="Mudar o tema"
           onClick={() => {
             window.__setPreferredTheme(isDarkMode ? "light" : "dark")
+
+            if (window.DISQUS !== undefined) {
+              window.setTimeout(() => {
+                window.DISQUS.reset({
+                  reload: true
+                })
+              }, 300)
+            }
           }}
           className={theme}
         >
@@ -73,7 +82,12 @@ const MenuBar = () => {
         >
           {isListMode ? <Grid /> : <List />}
         </S.MenuBarItem>
-        <S.MenuBarItem title="Ir para o Topo">
+        <S.MenuBarItem
+          title="Ir para o Topo"
+          onClick={() => {
+            window.scroll({ top: 0, behavior: "smooth" })
+          }}
+        >
           <Arrow />
         </S.MenuBarItem>
       </S.MenuBarGroup>

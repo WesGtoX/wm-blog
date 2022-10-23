@@ -7,7 +7,7 @@ const Avatar = () => {
   return (
     <S.AvatarWrapper>
       <StaticImage
-        src="../../../static/assets/img/wm_logo.png"
+        src="../../../static/assets/img/profile-photo.jpg"
         alt="Profile Photo"
         placeholder="blurred"
       />

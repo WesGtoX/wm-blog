@@ -3,7 +3,7 @@ import PostItem from "../PostItem"
 
 const Hit = ({ hit }) => (
   <PostItem
-    slug={hit.fields.slug}
+    slug={hit.slug}
     background={hit.background}
     category={hit.category}
     timeToRead={hit.timeToRead}
