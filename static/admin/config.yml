@@ -1,0 +1,69 @@
+backend:
+  name: github
+  repo: wesgtox/wm-blog
+  branch: main
+  site_domain: wm-blog.netlify.app
+
+publish_mode: editorial_workflow
+media_folder: "static/assets/img"
+public_folder: "assets/img"
+
+collections:
+  - name: "posts" # Used in routes, e.g., /admin/collections/blog
+    label: "Posts" # Used in the UI
+    folder: "posts" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - {
+          label: "Date",
+          name: "date",
+          widget: "datetime",
+          format: "YYYY-MM-DD hh:mm:ss",
+        }
+      - { label: "image", name: "thumbnail", widget: "image" }
+      - {
+          label: "Category",
+          name: "category",
+          widget: "select",
+          options:
+            [
+              "aws",
+              "css",
+              "dev",
+              "gcp",
+              "go",
+              "html",
+              "js",
+              "misc",
+              "py",
+              "shell",
+              "sql",
+              "sre",
+              "ts",
+            ],
+        }
+      - {
+          label: "Background",
+          name: "background",
+          widget: "select",
+          options:
+            [
+              { label: "AWS", value: "#FE9900" },
+              { label: "CSS", value: "#2DA0C3" },
+              { label: "Dev", value: "#637A91" },
+              { label: "GCP", value: "#EA4235" },
+              { label: "Go", value: "#01AED9" },
+              { label: "HTML", value: "#EB7728" },
+              { label: "JS", value: "#D6BA32" },
+              { label: "Misc", value: "#7AAB13" },
+              { label: "Py", value: "#4276A0" },
+              { label: "Shell", value: "#89E051" },
+              { label: "SQL", value: "#E38C00" },
+              { label: "SRE", value: "#06B1B8" },
+              { label: "TS", value: "#007ACC" },
+            ],
+        }
+      - { label: "Body", name: "body", widget: "markdown" }
