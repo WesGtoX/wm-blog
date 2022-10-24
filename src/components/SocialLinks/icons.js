@@ -4,7 +4,7 @@ import {
   Twitter,
   Youtube,
   Instagram,
-} from "styled-icons/boxicons-logos"
+} from "@styled-icons/boxicons-logos"
 
 const Icons = {
   Github,

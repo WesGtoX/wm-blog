@@ -8,6 +8,7 @@ exports.sourceNodes = ({ actions, schema }) => {
     type MarkdownRemarkFrontmatter {
       image: String
     }
+
     type MarkdownRemark implements Node {
       frontmatter: MarkdownRemarkFrontmatter
     }
